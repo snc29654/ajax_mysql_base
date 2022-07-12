@@ -49,6 +49,11 @@ try{
     if(strcmp($_POST['action'],"add")==0){
         $sql = "INSERT INTO `${dbtable}` SET kind = '${_POST['kind']}',idate = '$date', contents = '${_POST['contents']}';";
     }
+    if(strcmp($_POST['action'],"delrecord")==0){
+
+        $sql = "DELETE FROM $dbname.$dbtable WHERE id = '${_POST['delid']}'" ;
+    }
+
     $stmh = $pdo->prepare($sql);
     $stmh->execute();
 

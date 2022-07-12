@@ -12,7 +12,8 @@
         $('#send').click(function()
         {
            var data = {
-		        kind : $('#kind').val(),
+                delid : $('#delid').val(),
+                kind : $('#kind').val(),
 		        idate : $('#idate').val(),
 		        contents : $('#contents').val(),
 		        action : $('#action').val()
@@ -75,11 +76,13 @@
 <li><textarea name="contents" rows="15" cols="80" id="contents" placeholder="内容" ></textarea></li>
 <li><textarea name="phplog" rows="15" cols="80" id="phplog" placeholder="読み出し" ></textarea></li>
 <li><input type="text" size=20 id="srch_word" name="srch_word" placeholder="検索ワード"></li>
+<li><input type="text" size=20 id="delid" name="delid" placeholder="削除ID"></li>
 </ul>
 
 <p class="more"><input id="send" type="submit" value="DB書き込み"onclick="clickwrite()"/>
 <select name="action" id="action">
     <option value="add">追加登録（書き込み）</option>
+    <option value="delrecord">レコード削除（書き込み）</option>
     <option value="delall">全削除（書き込み）</option>
     </select></p>
 <p class="more"><input id="logread" type="submit" value="DB読み出し"onclick="clickread()"/>

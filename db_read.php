@@ -36,6 +36,7 @@ try{
     }else if(strcmp($_POST['actionread'],"readall")==0){
 
         $sql = "SELECT * FROM $dbname.$dbtable";
+        
     }else{
  
     }
