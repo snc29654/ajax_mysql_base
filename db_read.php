@@ -33,6 +33,10 @@ try{
 
         $sql = "SELECT * FROM $dbname.$dbtable WHERE kind LIKE '%" . $kind . "%'";
 
+    }else if(strcmp($_POST['actionread'],"idselect")==0){
+
+        $sql = "SELECT * FROM $dbname.$dbtable WHERE id = '${_POST['delid']}'" ;
+
     }else if(strcmp($_POST['actionread'],"readall")==0){
 
         $sql = "SELECT * FROM $dbname.$dbtable";
